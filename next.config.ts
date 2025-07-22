@@ -3,8 +3,11 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   output: 'export',
   basePath: process.env.PAGES_BASE_PATH,
-  webpack: (config) => {
-    config.module.noParse = /alasql/;
+  webpack: (config, {webpack}) => {
+    config.plugins.push(new webpack.IgnorePlugin({
+      resourceRegExp: /(react-native)/
+    }));
+  
     return config;
   },
   turbopack: {
