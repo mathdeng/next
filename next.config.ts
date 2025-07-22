@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   basePath: process.env.PAGES_BASE_PATH,
   webpack: (config) => {
-    config.module.noParse = /alasql/;
+    config.module.noParse = /alasql\.fs\.js$/;
     return config;
   },
   turbopack: {
