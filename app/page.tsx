@@ -11,6 +11,9 @@ export default function Home() {
           <Link href="/movie">影视</Link>
         </li>
         <li>
+          <Link href="/music">音乐</Link>
+        </li>
+        <li>
           <Link href="/dt">日期时间</Link>
         </li>
       </ol>
