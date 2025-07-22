@@ -2,7 +2,6 @@
 
 import data from "./data.json";
 import { useSearchParams } from 'next/navigation';
-import alasql from 'alasql';
 
 interface Book {
   name: string;
@@ -11,9 +10,7 @@ interface Book {
 export default function Page() {
   const searchParams = useSearchParams();
   const search = searchParams.get('search') ?? '';
-  const filteredData = alasql('select * from ? where name like ?', 
-    [data, `%${search}%`]
-  ) as Book[];
+  const filteredData = data.filter((book: Book) => book.name.toLowerCase().includes(search.toLowerCase()));
   
   return (
     <div>
