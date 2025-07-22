@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbo",
+		"dev": "next dev --turbo -p 4000",
 		"build": "next build"
 	},
 	"dependencies": {
