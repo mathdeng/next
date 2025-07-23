@@ -8,7 +8,8 @@
 		"alasql": "^4.6.6",
 		"next": "^15.1.7",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react-dom": "^19.0.0",
+		"tailwindcss": "^4.1.11"
 	},
 	"devDependencies": {
 		"@types/node": "^22.13.4",
