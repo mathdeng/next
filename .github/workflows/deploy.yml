@@ -47,6 +47,7 @@ jobs:
         run: npm run build
         env:
           PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
+          APITOKEN: ${{ secrets.APITOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
