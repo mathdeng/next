@@ -24,7 +24,7 @@ export default function Page() {
         <input type="search" name="search" className="border border-gray-300 px-2 py-1" defaultValue={search} />
         <button type="submit" className="bg-blue-500 text-white px-2 py-1">Search</button>
       </form>
-      <ol>
+      <ol className="list-decimal list-inside">
         {filteredData.map((record: Record) => (
           <li key={record.id}>
             <a target="_blank" rel="noreferrer" className="text-blue-500" href={record.url}>
