@@ -22,7 +22,7 @@ export default function Page() {
     <div>
       <form>
         <input type="search" name="search" className="border border-gray-300 px-2 py-1" defaultValue={search} />
-        <button type="submit">Search</button>
+        <button type="submit" className="bg-blue-500 text-white px-2 py-1">Search</button>
       </form>
       <ol>
         {filteredData.map((record: Record) => (
