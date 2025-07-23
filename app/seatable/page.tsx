@@ -1,6 +1,6 @@
 import { Base } from 'seatable-api';
 
-export default async function () {
+export default async function Page() {
   const config = {
     server: 'https://cloud.seatable.cn',
     APIToken: process.env.APITOKEN,
