@@ -4,7 +4,9 @@ import data from "./data.json";
 import { useSearchParams } from 'next/navigation';
 import alasql from 'alasql';
 
-interface Book {
+interface Record {
+  id: number;
+  url: string;
   name: string;
 }
 
@@ -12,9 +14,9 @@ export default function Page() {
   const searchParams = useSearchParams();
   const search = searchParams.get('search') ?? '';
   const filteredData = alasql(
-    `select * from ? where name like ?`, 
-    [data, `%${search}%`]
-  ) as Book[];
+    `select * from ? where url like ? or name like ?`, 
+    [data, `%${search}%`, `%${search}%`]
+  ) as Record[];
   
   return (
     <div>
@@ -23,9 +25,11 @@ export default function Page() {
         <button type="submit">Search</button>
       </form>
       <ol>
-        {filteredData.map((book: Book, index: number) => (
-          <li key={index.toString()}>
-            {book.name}
+        {filteredData.map((record: Record) => (
+          <li key={record.id}>
+            <a target="_blank" rel="noreferrer" href={record.url}>
+              {record.name}
+            </a>
           </li>
         ))}
       </ol>
