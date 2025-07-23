@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body>
-        <div>
+        <div className="mb-4">
           <Link href="/">Home</Link>
         </div>
         {children}
