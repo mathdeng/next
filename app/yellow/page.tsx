@@ -27,7 +27,7 @@ export default function Page() {
       <ol className="list-decimal list-inside">
         {filteredData.map((record: Record) => (
           <li key={record.id}>
-            <a target="_blank" rel="noreferrer" className="text-blue-500" href={record.url}>
+            <a target="_blank" rel="noopener noreferrer" className="text-blue-500" href={record.url}>
               {record.name}
             </a>
           </li>
