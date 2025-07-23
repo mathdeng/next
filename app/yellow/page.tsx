@@ -21,7 +21,7 @@ export default function Page() {
   return (
     <div>
       <form>
-        <input type="search" name="search" defaultValue={search} />
+        <input type="search" name="search" className="border-gray-300 px-2 py-1" defaultValue={search} />
         <button type="submit">Search</button>
       </form>
       <ol>
