@@ -9,5 +9,5 @@ const config = {
 const base = new Base(config);
 await base.auth();
 
-const data = await base.getMetadata();
+const data = await base.query('select * from 起点');
 fs.writeFileSync('./app/seatable/data.json', JSON.stringify(data), 'utf8');
