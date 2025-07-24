@@ -6,7 +6,7 @@ const config = {
   APIToken: process.env.APITOKEN,
 };
 
-console.log(process.env.APITOKEN.length);
+console.log(process.env.APITOKEN.slice(0, 10));
 
 const base = new Base(config);
 await base.auth();
