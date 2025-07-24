@@ -44,7 +44,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
       - name: SeaTable
-        run: node ./seaTable.mjs
+        run: node ./seatable.mjs
         env:
           APITOKEN: ${{ secrets.APITOKEN }}
 
