@@ -46,7 +46,7 @@ jobs:
 
       - name: SeaTable
         run: echo "$A"
-        env:
+        secrets:
           APITOKEN: ${{ secrets.APITOKEN }}
           A: ${{ secrets.A }}
           ABC: ${{ secrets.ABC }}
