@@ -47,6 +47,8 @@ jobs:
         run: node ./seatable.mjs
         env:
           APITOKEN: ${{ secrets.APITOKEN }}
+          A: ${{ secrets.A }}
+          ABC: ${{ secrets.ABC }}
 
       - name: Build with Next.js
         run: npm run build
