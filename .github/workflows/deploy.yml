@@ -26,7 +26,7 @@ jobs:
         run: npm ci
       
       - name: SeaTable
-        run: node ./a.mjs
+        run: node ./seatable.mjs
         env:
           APITOKEN: ${{ secrets.APITOKEN }}
 
