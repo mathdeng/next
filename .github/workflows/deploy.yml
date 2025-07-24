@@ -47,7 +47,7 @@ jobs:
         run: echo "$A"
         env:
           APITOKEN: ${{ secrets.APITOKEN }}
-          A: 456
+          A: ${{ secrets.A }}
           ABC: ${{ secrets.ABC }}
 
       - name: Build with Next.js
