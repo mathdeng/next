@@ -43,6 +43,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
+      - name: SeaTable
+        run: node ./seaTable.mjs
+        env:
+          APITOKEN: ${{ secrets.APITOKEN }}
+
       - name: Build with Next.js
         run: npm run build
         env:
