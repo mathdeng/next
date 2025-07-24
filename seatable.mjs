@@ -8,8 +8,6 @@ const config = {
 
 const base = new Base(config);
 await base.auth();
-console.log('auth success');
 
 const data = await base.getMetadata();
-console.log('getMetadata success');
 fs.writeFileSync('./app/seatable/data.json', JSON.stringify(data), 'utf8');
