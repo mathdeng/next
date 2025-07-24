@@ -44,10 +44,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
       - name: SeaTable
-        run: echo $A
+        run: echo "$A"
         env:
           APITOKEN: ${{ secrets.APITOKEN }}
-          A: ${{ secrets.A }}
+          A: 456
           ABC: ${{ secrets.ABC }}
 
       - name: Build with Next.js
