@@ -6,7 +6,7 @@ const config = {
   APIToken: process.env.APITOKEN,
 };
 
-console.log('长度为：', process.env.ABC.length);
+console.log('长度为：', process.env.A.length);
 
 const base = new Base(config);
 await base.auth();
