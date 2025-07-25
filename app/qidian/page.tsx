@@ -1,6 +1,6 @@
 'use client'
 
-import data from "./data.json";
+import data from "@/app/json/qidian.json";
 import { useSearchParams } from 'next/navigation';
 import alasql from 'alasql';
 

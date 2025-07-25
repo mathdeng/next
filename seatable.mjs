@@ -12,6 +12,6 @@ await base.auth();
 let data;
 
 data = await base.query('select * from qidian limit 1000');
-fs.writeFileSync('./app/qidian/data.json', JSON.stringify(data), 'utf8');
+fs.writeFileSync('./app/json/qidian.json', JSON.stringify(data), 'utf8');
 data = await base.query('select * from yellow limit 1000');
-fs.writeFileSync('./app/yellow/data.json', JSON.stringify(data), 'utf8');
+fs.writeFileSync('./app/json/yellow.json', JSON.stringify(data), 'utf8');
