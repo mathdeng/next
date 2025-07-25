@@ -11,7 +11,7 @@ await base.auth();
 
 let data;
 
-data = await base.query('select * from qidian');
+data = await base.query('select * from qidian limit 1000');
 fs.writeFileSync('./app/qidian/data.json', JSON.stringify(data), 'utf8');
-data = await base.query('select * from yellow');
+data = await base.query('select * from yellow limit 1000');
 fs.writeFileSync('./app/yellow/data.json', JSON.stringify(data), 'utf8');
