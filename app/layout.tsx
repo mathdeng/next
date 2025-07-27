@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: '吉星',
-  description: '大吉大利',
+  description: '吉星高照',
 };
 
 export default function RootLayout({
@@ -19,6 +19,9 @@ export default function RootLayout({
           <Link href="/">Home</Link>
         </div>
         {children}
+        <footer className="mt-4 text-center">
+          天下大吉
+        </footer>
       </body>
     </html>
   );
