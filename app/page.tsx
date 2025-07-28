@@ -10,9 +10,6 @@ export default function Home() {
         <li>
           <Link className="text-blue-500" href="/qidian">起点</Link>
         </li>
-        <li>
-          <Link className="text-blue-500" href="/dt">日期时间</Link>
-        </li>
       </ol>
     </main>
   );
