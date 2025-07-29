@@ -5,11 +5,13 @@
 		"build": "next build"
 	},
 	"dependencies": {
+		"@arco-design/web-react": "^2.66.2",
 		"alasql": "^4.6.6",
 		"next": "^15.1.7",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
-		"seatable-api": "^1.0.43"
+		"seatable-api": "^1.0.43",
+		"xlsx": "^0.18.5"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.11",
