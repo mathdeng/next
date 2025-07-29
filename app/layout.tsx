@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import "./globals.css";
+import "@arco-design/web-react/dist/css/arco.css";
 
 export const metadata: Metadata = {
   title: '吉星',
