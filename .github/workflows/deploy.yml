@@ -3,6 +3,9 @@ name: Deploy Next.js site to Pages (npm simple)
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "30 13 * * *"
+    - cron: "30 15 * * *"
   workflow_dispatch:
 
 permissions:
