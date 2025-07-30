@@ -13,9 +13,12 @@ interface Record {
 export default function Page() {
   const searchParams = useSearchParams();
   const search = searchParams.get('search') ?? '';
+
+  const collator = new Intl.Collator('zh-Hans-CN');
+  const myData = data.toSorted((a, b) => collator.compare(a.name, b.name)) as Record[];
   const filteredData = alasql(
     `select * from ? where url like ? or name like ?`, 
-    [data, `%${search}%`, `%${search}%`]
+    [myData, `%${search}%`, `%${search}%`]
   ) as Record[];
   
   return (
