@@ -15,7 +15,7 @@ type Record = {
 export default function TablePage({ data, bookId }: { data: Record[], bookId: string }) {
   const columns = [
     {
-      title: '日期',
+      title: '日期时间',
       dataIndex: 'uT',
       width: 200,
     },
