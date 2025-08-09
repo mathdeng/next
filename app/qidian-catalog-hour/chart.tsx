@@ -17,6 +17,9 @@ export default function ChartPage({ data }: { data: Record[] }) {  const contain
         text: '图表',
         left: 'center'
       },
+      tooltip: {
+        trigger: 'axis' as const
+      },
       xAxis: {
         name: '小时',
         data: data.map(x => x.dt)
