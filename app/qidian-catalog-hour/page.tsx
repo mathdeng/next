@@ -2,7 +2,7 @@
 
 import alasql from 'alasql';
 import { useState } from 'react';
-import TablePage from './table';
+import ChartPage from './chart'
 
 interface Record {
   dt: number;
@@ -77,6 +77,6 @@ ORDER BY h.dt
       </div>
       <button type="submit" className="bg-blue-500 text-white px-4 py-2">提交</button>
     </form>
-    <TablePage data={records} />
+    <ChartPage data={records} />
   </div>
 }
