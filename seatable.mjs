@@ -15,7 +15,7 @@ await base.auth();
 dayjs.extend(utc);
 dayjs.extend(timezone);
 const now = dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss');
-await base.appendRow('action', {dt: now});
+await base.appendRow('action', {dt: now, name: process.env.EVENT_NAME});
 
 let data;
 

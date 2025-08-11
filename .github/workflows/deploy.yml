@@ -33,11 +33,10 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: SeaTable
-        run: |
-          node ./seatable.mjs
-          echo '${{ github.workflow }}'
+        run: node ./seatable.mjs
         env:
           APITOKEN: ${{ secrets.APITOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
 
       - name: Build with Next.js
         run: npm run build
