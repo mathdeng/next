@@ -35,7 +35,7 @@ jobs:
       - name: SeaTable
         run: |
           node ./seatable.mjs
-          echo ${{github.event_name}}
+          echo '${{ toJSON(github.event) }}'
         env:
           APITOKEN: ${{ secrets.APITOKEN }}
 
