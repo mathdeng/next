@@ -33,7 +33,9 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: SeaTable
-        run: node ./seatable.mjs
+        run: |
+          node ./seatable.mjs
+          echo ${{toJson(github.event)}}
         env:
           APITOKEN: ${{ secrets.APITOKEN }}
 
