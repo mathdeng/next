@@ -4,7 +4,7 @@ import data from "@/app/json/action.json";
 
 interface Record {
   dt: string;
-  name: string;
+  name: string | null;
 }
 
 export default function Page() {
