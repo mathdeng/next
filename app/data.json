@@ -24,7 +24,11 @@
     "url": "/qidian-catalog-month"
   },
   {
-    "name": "日志",
+    "name": "Seatable 更新日志",
+    "url": "/log"
+  },
+  {
+    "name": "GitHub Pages 部署日志",
     "url": "/action"
   },
   {

@@ -23,5 +23,8 @@ data = await base.query('select * from qidian limit 1000');
 fs.writeFileSync('./app/json/qidian.json', JSON.stringify(data), 'utf8');
 data = await base.query('select * from yellow limit 1000');
 fs.writeFileSync('./app/json/yellow.json', JSON.stringify(data), 'utf8');
+
 data = await base.query('select * from action order by dt desc limit 10');
 fs.writeFileSync('./app/json/action.json', JSON.stringify(data), 'utf8');
+data = await base.query('select * from log order by dt desc limit 10');
+fs.writeFileSync('./app/json/log.json', JSON.stringify(data), 'utf8');
