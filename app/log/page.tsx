@@ -1,10 +1,9 @@
 'use client'
 
-import data from "@/app/json/action.json";
+import data from "@/app/json/log.json";
 
 interface Record {
   dt: string;
-  name: string | null;
 }
 
 export default function Page() {
@@ -15,7 +14,7 @@ export default function Page() {
       <ol className="list-decimal list-inside">
         {data.map((record: Record, index: number) => (
           <li key={index.toString()}>
-            {record.dt} {record.name}
+            {record.dt}
           </li>
         ))}
       </ol>
