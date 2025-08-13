@@ -1,8 +1,6 @@
 name: Deploy Next.js site to Pages (npm simple)
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
   repository_dispatch:
     types: [deploy-nextjs]
