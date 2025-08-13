@@ -18,7 +18,7 @@ const now = dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss');
 await base.appendRow('action', {dt: now, name: process.env.EVENT_NAME});
 
 async function queryAndWrite(sql, tableName) {
-  data = await base.query(sql);
+  const data = await base.query(sql);
   fs.writeFileSync(`./app/json/${tableName}.json`, JSON.stringify(data), 'utf8');
 }
 
