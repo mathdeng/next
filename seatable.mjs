@@ -30,8 +30,8 @@ await queryAndWrite(sql, 'qidian');
 sql = 'SELECT * FROM yellow LIMIT 1000';
 await queryAndWrite(sql, 'yellow');
 
-sql = 'SELECT * FROM action ORDER BY DT DESC LIMIT 10';
+sql = 'SELECT * FROM action ORDER BY dt DESC LIMIT 10';
 await queryAndWrite(sql, 'action');
 
-sql = 'SELECT * FROM log ORDER BY DT DESC LIMIT 10';
+sql = 'SELECT * FROM log ORDER BY dt DESC LIMIT 10';
 await queryAndWrite(sql, 'log');
