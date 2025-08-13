@@ -17,14 +17,21 @@ dayjs.extend(timezone);
 const now = dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss');
 await base.appendRow('action', {dt: now, name: process.env.EVENT_NAME});
 
-let data;
+async function queryAndWrite(sql, tableName) {
+  data = await base.query(sql);
+  fs.writeFileSync(`./app/json/${tableName}.json`, JSON.stringify(data), 'utf8');
+}
 
-data = await base.query('select * from qidian limit 1000');
-fs.writeFileSync('./app/json/qidian.json', JSON.stringify(data), 'utf8');
-data = await base.query('select * from yellow limit 1000');
-fs.writeFileSync('./app/json/yellow.json', JSON.stringify(data), 'utf8');
+let sql;
 
-data = await base.query('select * from action order by dt desc limit 10');
-fs.writeFileSync('./app/json/action.json', JSON.stringify(data), 'utf8');
-data = await base.query('select * from log order by dt desc limit 10');
-fs.writeFileSync('./app/json/log.json', JSON.stringify(data), 'utf8');
+sql = 'SELECT * FROM qidian LIMIT 1000';
+await queryAndWrite(sql, 'qidian');
+
+sql = 'SELECT * FROM yellow LIMIT 1000';
+await queryAndWrite(sql, 'yellow');
+
+sql = 'SELECT * FROM action ORDER BY DT DESC LIMIT 10';
+await queryAndWrite(sql, 'action');
+
+sql = 'SELECT * FROM log ORDER BY DT DESC LIMIT 10';
+await queryAndWrite(sql, 'log');
