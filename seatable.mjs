@@ -6,7 +6,7 @@ import timezone from 'dayjs/plugin/timezone.js';
 
 const config = {
   server: 'https://cloud.seatable.cn',
-  APIToken: process.env.APITOKEN,
+  APIToken: process.env.SEATABLE_TOKEN,
 };
 
 const base = new Base(config);

@@ -33,7 +33,7 @@ jobs:
       - name: SeaTable
         run: node ./seatable.mjs
         env:
-          APITOKEN: ${{ secrets.APITOKEN }}
+          SEATABLE_TOKEN: ${{ secrets.SEATABLE_TOKEN }}
           EVENT_NAME: ${{ github.event_name }}
 
       - name: Build with Next.js
