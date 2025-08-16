@@ -8,22 +8,6 @@
     "url": "/qidian"
   },
   {
-    "name": "起点 目录 排版",
-    "url": "/qidian-catalog-design"
-  },
-  {
-    "name": "起点 目录 小时",
-    "url": "/qidian-catalog-hour"
-  },
-  {
-    "name": "起点 目录 日期",
-    "url": "/qidian-catalog-day"
-  },
-  {
-    "name": "起点 目录 年月",
-    "url": "/qidian-catalog-month"
-  },
-  {
     "name": "Seatable 推送日志",
     "url": "/log"
   },
@@ -32,7 +16,7 @@
     "url": "/action"
   },
   {
-    "name": "冒号",
-    "url": "/colon"
+    "name": "工具",
+    "url": "/tool"
   }
 ]
