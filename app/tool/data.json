@@ -18,5 +18,9 @@
   {
     "name": "冒号",
     "url": "/colon"
+  },
+  {
+    "name": "换行",
+    "url": "/line"
   }
 ]
