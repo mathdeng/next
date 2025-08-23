@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://codecorp.cloudstudio.net/dashboard/workspace",
+    "name": "Coding Cloud Studio Workspace"
+  },
+  {
+    "url": "https://github.com/",
+    "name": "GitHub"
+  },
+  {
+    "url": "https://gitee.com/",
+    "name": "Gitee 码云"
+  },
+  {
+    "url": "https://m.qidian.com/rank/sign/",
+    "name": "起点 签约榜"
+  }
+]
