@@ -1,21 +1,24 @@
 'use client'
 
-import { useState } from 'react';
+import {useState, useMemo} from 'react';
 import TablePage from './table';
+import TabsPage from './tabs';
 
-type CS = {
+interface Chapter {
   uuid: number;
   cN: string;
   uT: string;
   cnt: number;
   cU: string;
   id: number;
-  sS: number
+  sS: number;
 }
 
 export default function Page() {
-  const [records, setRecords] = useState<CS[]>([]);
+  const [records, setRecords] = useState<Chapter[]>([]);
+  const [status, setStatus] = useState<string>("-1");
   const [bookId, setBookId] = useState('');
+  const [order, setOrder] = useState(false);
 
   function action(formData: FormData) {
     const text = formData.get('code')?.toString() ?? '';
@@ -24,23 +27,41 @@ export default function Page() {
     if (match) {
       json = JSON.parse(match[1]);
     } else {
-      return
+      return;
     }
 
-    let vs;
-    let cs;
-    let id;
+    let volumns;
+    let chapters;
+    let bookId;
     try {
-      vs = json['pageContext']['pageProps']['pageData']['vs'];
-      cs = vs.map((x: {cs: CS[]}) => x['cs']).flat();
-      id = json['pageContext']['pageProps']['pageData']['bookId'];
+      volumns = json['pageContext']['pageProps']['pageData']['vs'];
+      chapters = volumns.map((x: {cs: Chapter[]}) => x['cs']).flat();
+      bookId = json['pageContext']['pageProps']['pageData']['bookId'];
     } catch {
-      return
+      return;
     }
 
-    setRecords(cs);
-    setBookId(id);
+    setRecords(chapters);
+    setBookId(bookId);
   }
+
+  function onClick() {
+    setOrder(prev => !prev);
+  }
+
+  const filteredRecords = useMemo(() => {
+    let result;
+    if (status === '-1') {
+      result = records;
+    } else {
+      result = records.filter(item => item.sS === parseInt(status, 10));
+    }
+
+    if (order) {
+      result = result.toReversed();
+    }
+    return result;
+  }, [records, status, order])
 
   return <div>
     <form action={action}>
@@ -52,7 +73,9 @@ export default function Page() {
         </label>
       </div>
       <button type="submit" className="bg-blue-500 text-white px-4 py-2">提交</button>
+      <button type="button" className="bg-blue-400 text-white px-4 py-2" onClick={onClick}>排序</button>
     </form>
-    <TablePage data={records} bookId={bookId} />
+    <TabsPage onChange={setStatus} />
+    <TablePage data={filteredRecords} bookId={bookId} />
   </div>
 }
