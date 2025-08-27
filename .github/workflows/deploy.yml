@@ -4,6 +4,10 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [deploy-nextjs]
+  schedule:
+    - cron: "30 6 * * *"
+    - cron: "30 14 * * *"
+    - cron: "30 22 * * *"
 
 permissions:
   pages: write
