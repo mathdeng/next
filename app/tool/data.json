@@ -24,7 +24,11 @@
     "url": "/line"
   },
   {
-    "name": "表格",
+    "name": "表格 Univer",
     "url": "/sheet.html"
+  },
+  {
+    "name": "表格 LuckySheet",
+    "url": "/luckysheet.html"
   }
 ]
