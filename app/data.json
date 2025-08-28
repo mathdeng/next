@@ -16,14 +16,6 @@
     "url": "/qidian"
   },
   {
-    "name": "Seatable 推送日志",
-    "url": "/log"
-  },
-  {
-    "name": "GitHub Pages 部署日志",
-    "url": "/action"
-  },
-  {
     "name": "工具",
     "url": "/tool"
   }

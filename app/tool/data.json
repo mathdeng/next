@@ -1,5 +1,13 @@
 [
   {
+    "name": "Seatable 推送日志",
+    "url": "/log"
+  },
+  {
+    "name": "GitHub Pages 部署日志",
+    "url": "/action"
+  },
+  {
     "name": "起点 目录 排版",
     "url": "/qidian-catalog-design"
   },
