@@ -12,6 +12,10 @@
     "url": "/qidian"
   },
   {
+    "name": "QQ阅读",
+    "url": "/qqread"
+  },
+  {
     "name": "工具",
     "url": "/tool"
   }
