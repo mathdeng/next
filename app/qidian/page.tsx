@@ -29,7 +29,7 @@ export default function Page() {
       <ol className="list-decimal list-inside">
         {filteredData.map((record: Record) => (
           <li key={record.id}>
-            <a target="_blank" rel="noopener noreferrer" className="text-indigo-500" href={'https://m.qidian.com/book/' + record.bookId.toString()}>
+            <a target="_blank" rel="noopener noreferrer" className="text-indigo-500" href={`https://m.qidian.com/book/${record.bookId}/`}>
               {record.bookName}
             </a>
           </li>
