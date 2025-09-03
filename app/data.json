@@ -8,12 +8,12 @@
     "url": "/yellow"
   },
   {
-    "name": "起点",
-    "url": "/qidian"
-  },
-  {
     "name": "QQ阅读",
     "url": "/qqread"
+  },
+  {
+    "name": "起点",
+    "url": "/qidian"
   },
   {
     "name": "工具",
