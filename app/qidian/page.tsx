@@ -15,7 +15,7 @@ export default function Page() {
   const searchParams = useSearchParams();
   const search = searchParams.get('search') ?? '';
   const filteredData = alasql(
-    `select * from ? where bookName like ? or authorName like ?`, 
+    `select * from ? where bookName like ? or authorName like ?`,
     [data, `%${search}%`, `%${search}%`]
   ) as Record[];
 
@@ -29,9 +29,17 @@ export default function Page() {
       <ol className="list-decimal list-inside">
         {filteredData.map((record: Record) => (
           <li key={record.id}>
-            <a target="_blank" rel="noopener noreferrer" className="text-indigo-500" href={`https://m.qidian.com/book/${record.bookId}/`}>
-              {record.bookName}
-            </a>
+            <span className="space-x-2">
+              <a target="_blank" rel="noopener noreferrer" className="text-indigo-500" href={`https://m.qidian.com/book/${record.bookId}/`}>
+                {record.bookName}
+              </a>
+              <a target="_blank" rel="noopener noreferrer" className="text-indigo-500" href={`https://m.qidian.com/book/${record.bookId}/catalog/`}>
+                目录
+              </a>
+              <a target="_blank" rel="noopener noreferrer" className="text-indigo-500" href={`https://m.qidian.com/book/${record.bookId}/badge/`}>
+                荣誉
+              </a>
+            </span>
           </li>
         ))}
 
