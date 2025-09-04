@@ -39,6 +39,9 @@ export default function Page() {
               <a target="_blank" rel="noopener noreferrer" className="text-indigo-500" href={`https://m.qidian.com/book/${record.qidianId}/`}>
                 起点
               </a>
+              <a target="_blank" rel="noopener noreferrer" className="text-indigo-500" href={`https://m.qidian.com/book/${record.qidianId}/catalog/`}>
+                目录
+              </a>
             </span>
           </li>
         ))}
