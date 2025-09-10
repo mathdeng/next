@@ -1,11 +1,12 @@
 export default function Page() {
-  const start = Array.from({ length: 24 }).map((_, i) => i);
-  const end = start.map(i => (i + 18) % 24);
+  const num = Array.from({ length: 24 }).map((_, i) => i);
   return <ol className="list-decimal list-inside">
-    {start.map(i => (
-      <li key={i}>
-        {i.toString().padStart(2, '0')}:00 - {end[i].toString().padStart(2, '0')}:00
+    {num.map(i => {
+      const start = i.toString().padStart(2, '0');
+      const end = ((i + 18) % 24).toString().padStart(2, '0');
+      return <li key={i}>
+        {start}:00 - {end}:00
       </li>
-    ))}
+    })}
   </ol>
 }
