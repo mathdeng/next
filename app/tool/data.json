@@ -24,6 +24,10 @@
     "url": "/qidian-catalog-month"
   },
   {
+    "name": "起点 订阅价格",
+    "url": "/qidian-subscription"
+  },
+  {
     "name": "冒号",
     "url": "/colon"
   },
