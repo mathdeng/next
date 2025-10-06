@@ -1,0 +1,12 @@
+main:
+  push:
+    - imports:
+        - https://cnb.cool/mathdeng/secret/-/blob/main/env.yml
+      stages:
+        - name: sync to github
+          image: tencentcom/git-sync
+          settings:
+            target_url: https://github.com/mathdeng/next.git
+            auth_type: https
+            username: ${GITHUB_USERNAME}
+            password: ${GITHUB_TOKEN}
