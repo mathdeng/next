@@ -1,4 +1,17 @@
 $:
+  vscode:
+    - services:
+        - vscode
+        - docker
+      docker:
+        image: docker.cnb.cool/mathdeng/cnb
+        dockerUser: $CNB_TOKEN_USER_NAME
+        dockerPassword: $CNB_TOKEN
+      stages:
+        - name: 安装依赖
+          script:
+            - npm install
+
   push:
     - imports:
         - https://cnb.cool/mathdeng/secret/-/blob/main/env.yml
