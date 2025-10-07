@@ -1,4 +1,4 @@
-main:
+$:
   push:
     - imports:
         - https://cnb.cool/mathdeng/secret/-/blob/main/env.yml
