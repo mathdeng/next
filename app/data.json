@@ -1,19 +1,19 @@
 [
   {
-    "name": "导航",
-    "url": "/navigation"
-  },
-  {
-    "name": "黄页",
-    "url": "/yellow"
-  },
-  {
     "name": "QQ阅读",
     "url": "/qqread"
   },
   {
     "name": "起点",
     "url": "/qidian"
+  },
+  {
+    "name": "导航",
+    "url": "/navigation"
+  },
+  {
+    "name": "黄页",
+    "url": "/yellow"
   },
   {
     "name": "工具",
