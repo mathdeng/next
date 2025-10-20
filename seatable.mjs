@@ -24,9 +24,6 @@ async function queryAndWrite(sql, tableName) {
 
 let sql;
 
-sql = 'SELECT * FROM qidian LIMIT 1000';
-await queryAndWrite(sql, 'qidian');
-
 sql = 'SELECT * FROM qqread LIMIT 1000';
 await queryAndWrite(sql, 'qqread');
 
