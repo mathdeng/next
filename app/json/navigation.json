@@ -16,8 +16,12 @@
     "name": "Vercel"
   },
   {
-    "url": "https://www.cloudflare.com/",
-    "name": "Cloudflare"
+    "url": "https://dash.cloudflare.com/",
+    "name": "Cloudflare Dashboard"
+  },
+  {
+    "url": "https://console.cloud.tencent.com/edgeone/pages",
+    "name": "腾讯云 EdgeOne Pages"
   },
   {
     "url": "https://m.qidian.com/rank/sign/",
