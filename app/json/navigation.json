@@ -1,11 +1,23 @@
 [
   {
+    "url": "https://github.com/",
+    "name": "GitHub"
+  },
+  {
     "url": "https://gitee.com/",
     "name": "Gitee 码云"
   },
   {
     "url": "https://cnb.cool/",
     "name": "腾讯云 CNB"
+  },
+  {
+    "url": "https://vercel.com/",
+    "name": "Vercel"
+  },
+  {
+    "url": "https://www.cloudflare.com/",
+    "name": "Cloudflare"
   },
   {
     "url": "https://m.qidian.com/rank/sign/",
